@@ -5,7 +5,13 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "eslint": "eslint .",
+    "format": "prettier --check .",
+    "stylelint":"stylelint \"**/*.css\"",
+    "eslint:fix": "eslint . --fix",
+    "format:fix": "prettier --write .",
+    "stylelint:fix": "stylelint \"**/*.css\" --fix",
+    "pre-commit": "npm run eslint && npm run stylelint"
   },
   "author": "",
   "license": "ISC",
